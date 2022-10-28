@@ -1,9 +1,14 @@
 const baseEndpoint = 'https://api.github.com/';
+/* se agrego '' */
 const usersEndpoint = `${baseEndpoint}/users`;
+
+/* se agrega # */
 const $n = document.querySelector('#name');
 const $b = document.querySelector('#blog');
 const $l = document.querySelector('#location');
 
+
+/* se agrego async try and catch */
 async function displayUser(username) {
 $n.textContent = 'cargando...';
 try {
@@ -14,6 +19,8 @@ try {
  
 }
 catch {
+
+  /* se agregan '' para modificar los archivos */
   console.log(data);
   $n.textContent = `${data.name}`;
   $b.textContent = `${data.blog}`;
